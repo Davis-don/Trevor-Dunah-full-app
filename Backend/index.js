@@ -5,7 +5,13 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 const cors = require('cors'); 
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https://trevordunah.vercel.app/"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+));
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
