@@ -10,6 +10,9 @@ app.use(cors());
 const nodemailer=require('./nodemailerHandler')
 app.use('/Send/email',nodemailer)
 
+app.use('/',(req,res)=>{
+    res.send('server is running')
+})
 app.listen(4000,(error)=>{
     if(error) throw error
     console.log('listening to port 4000')
