@@ -34,7 +34,7 @@ if(response){
     setAlertitem(true)
     setForm(false)
     setMesage(data.message)
-    setInterval(() => {
+    setTimeout(() => {
         setForm(true)
         setAlertitem(false)
     }, 4000);
