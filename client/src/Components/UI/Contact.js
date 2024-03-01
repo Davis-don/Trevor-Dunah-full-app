@@ -22,7 +22,7 @@ const [emailData,setEmailData]=useState({
     let handlepost = async (e)=>{
         e.preventDefault();
 try{
-const response= await fetch ('http://localhost:4000/Send/email',{
+const response= await fetch ('/',{
     method:'post',
     headers:{
         "content-type":'application/json'
