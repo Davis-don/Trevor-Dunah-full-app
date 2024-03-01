@@ -5,13 +5,16 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 const cors = require('cors'); 
-app.use(cors(
-    {
-        origin:["https://trevordunah.vercel.app/"],
-        methods:["POST","GET"],
-        credentials:true
-    }
-));
+
+// Allow requests only from 'https://your-frontend-url.com'
+const corsOptions = {
+    origin: 'https://trevordunah.vercel.app/',
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  };
+  
+  app.use(cors(corsOptions));
+
+
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
