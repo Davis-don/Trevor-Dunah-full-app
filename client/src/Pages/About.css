@@ -1,0 +1,186 @@
+@media (max-width:640px){
+    .overall-about-page{
+
+    }
+    .about-body{
+position: relative;
+    }
+    .intoduction-top-about-section{
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    }
+    .about-top-intro-background{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: +1;
+    }
+    .top-img-opacity-regulator{
+    position: absolute;
+    z-index: +2;
+    top:0px;
+height: 100%;
+background-color: black;
+opacity: 0.6;
+width: 100%;
+}
+.about-word{
+font-size: 7vw;
+}
+
+
+.on-top-about-image-text{
+    position: absolute;
+    z-index: +3;
+    z-index: +3;
+    bottom: 15vw;
+    right: 0px;
+    left: 30px;
+    width: max-content;
+
+    }
+    .dunah-about-desctiption{
+    width:90vw;
+    margin: auto;
+    
+    }
+    .actual-about-paragraph{
+    font-size: 20px;
+    }
+    .dunah-img-container{
+    width: 100%;
+    height: 300px;
+    }
+    .bottom-about-dunag-image{
+        width: 100%;
+        height:50vw;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width:641px) and (max-width:1025px){
+    .overall-about-page{
+
+    }
+    .about-body{
+position: relative;
+    }
+    .intoduction-top-about-section{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    }
+    .about-top-intro-background{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: +1;
+    }
+    .top-img-opacity-regulator{
+    position: absolute;
+    z-index: +2;
+    top:0px;
+height: 100%;
+background-color: black;
+opacity: 0.6;
+width: 100%;
+}
+.about-word{
+font-size: 7vw;
+}
+
+
+.on-top-about-image-text{
+    position: absolute;
+    z-index: +3;
+    z-index: +3;
+    bottom: 15vw;
+    right: 0px;
+    left: 30px;
+    width: max-content;
+
+    }
+    .overall-identity-description-service{
+    display: flex;
+    flex-direction: row;
+    }
+    .dunah-about-desctiption{
+    
+    }
+    .actual-about-paragraph{
+    font-size: 20px;
+    }
+    .dunah-img-container{
+
+    }
+    .bottom-about-dunag-image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+@media screen and (min-width:1026px){
+    .overall-about-page{
+
+    }
+    .about-body{
+position: relative;
+    }
+    .intoduction-top-about-section{
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    }
+    .about-top-intro-background{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: +1;
+    }
+    .top-img-opacity-regulator{
+    position: absolute;
+    z-index: +2;
+    top:0px;
+height: 100%;
+background-color: black;
+opacity: 0.6;
+width: 100%;
+}
+.about-word{
+font-size: 7vw;
+}
+
+
+.on-top-about-image-text{
+    position: absolute;
+    z-index: +3;
+    z-index: +3;
+    bottom: 15vw;
+    right: 0px;
+    left: 30px;
+    width: max-content;
+
+    }
+    .overall-identity-description-service{
+    display: flex;
+    flex-direction: row;
+    }
+    .dunah-about-desctiption{
+    
+    }
+    .actual-about-paragraph{
+    font-size: 20px;
+    }
+    .dunah-img-container{
+
+    }
+    .bottom-about-dunag-image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

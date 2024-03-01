@@ -1,0 +1,232 @@
+.contact-header-display-items{
+    position: fixed;
+    z-index: +9;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color:black;
+    opacity: 0.9;
+    }
+    .contact-retainer-item{
+        position: absolute;
+        top: 50%;  /* position the top  edge of the element at the middle of the parent */
+        left: 50%; /* position the left edge of the element at the middle of the parent */
+    
+        transform: translate(-50%, -50%); /* This is a shorthand of
+                                             translateX(-50%) and translateY(-50%) */
+    }
+    
+    
+    
+    
+    .drop-down-div{
+        position: absolute;
+    top:80px;
+    background-color: black;
+    padding: 30px;
+    }
+    .drop-down-ul li:hover{
+    border-bottom: 1px solid purple;
+    }
+    .flow-down-btn{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    }
+    .flow-down-btn li{
+    border-bottom: 1px solid purple;
+    }
+    .header-overall-component{
+    position: relative;
+    }
+    .top-header-contact-section{
+        padding:10px;
+        height: 30px;
+        background-image: linear-gradient(to right, rgb(60, 11, 95) , purple);
+        width: 100vw;
+        
+        }
+    
+    @media (max-width:640px){
+        .overall-bottom-header{
+        background-color: #111010;
+        padding: 10px;
+        }
+        .bottom-header-navbar-section{
+            line-height: 0px;
+            width: max-content;
+            margin: auto;
+    
+        }
+    .Trevor-Dunah-name{
+    text-align: center;
+    font-family: 'Great Vibes';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-size: 15vw;
+    }
+    .proficiency-summary{
+    
+    }
+    .proficiency-title{
+        padding: 5px;
+        border-left: 3px solid white;
+        float: right;
+        }  
+    @media (max-width:221px){
+        .proficiency-title{
+            padding: 5px;
+            border-left: 2px solid white;
+            font-size: 7vw;
+            float: right;
+            }  
+    }
+    .menu-icon{
+    width: max-content;
+    margin: auto;
+    margin-top: 40px;
+    }
+    .sidebar-container-div{
+    width: 60vw;
+    height:max-content;
+    background-color:black;
+    margin:auto;
+    position:absolute;
+    z-index: +5;
+    top:68vh;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+    }
+    .sidebar-container-div ul{
+    display: flex;
+    flex-direction: column;
+    }
+    .link-item{
+    padding: 20px;
+    }
+    .active{
+    background-color: purple;
+    color:black
+    }
+    .bg-sidebar-appear-setter{
+    background-color:black;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: +4;
+    }
+    
+    .right-side-largescreen-links{
+    display:none;
+    }
+    }
+    @media screen and (min-width:641px) and (max-width:1025px){
+        .overall-bottom-header{
+            background-color: #111010;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            } 
+            
+            .Trevor-Dunah-name{
+                text-align: center;
+                font-family: 'Great Vibes';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                font-size: 40px;
+                }
+                .menu-icon{
+                    margin-top: 20px;
+                    margin-right: 10vw;
+                }
+    
+    
+                .sidebar-container-div{
+                    width: 60vw;
+                    height:max-content;
+                    background-color:black;
+                    margin:auto;
+                    position: absolute;
+                    z-index: +5;
+                    top: 55vh;  /* position the top  edge of the element at the middle of the parent */
+                    left: 50%; /* position the left edge of the element at the middle of the parent */
+                    
+                    transform: translate(-50%, -50%); /* This is a shorthand of
+                                                         translateX(-50%) and translateY(-50%) */
+                    }
+                    .sidebar-container-div ul{
+                    display: flex;
+                    flex-direction: column;
+                    }
+                    .link-item{
+                    padding: 20px;
+                    }
+                    .active{
+                    background-color: purple;
+                    color:black
+                    }
+                    
+    
+                    .bg-sidebar-appear-setter{
+                        background-color:black;
+                        width: 100vw;
+                        height: 100vh;
+                        position: absolute;
+                        z-index: +4;
+                        }
+    
+                .right-side-largescreen-links{
+                    display:none
+                }
+    
+                
+            
+    }
+    @media screen and (min-width:1026px){
+        .overall-bottom-header{
+            background-color: #111010;
+            padding: 10px;
+            display:flex;
+            flex-direction: row;
+            gap:10vw
+            } 
+        .Trevor-Dunah-name{
+            font-family: 'Great Vibes';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            font-size: 40px;
+            }
+            .desktop-view-nav-links{
+    
+            }
+            .right-side-largescreen-links{
+            display: flex;
+            flex-direction: row;
+            gap:30px;
+            }
+            .desktop-view-nav-links ul{
+          display: flex;
+          flex-direction: row;
+          gap:30px;
+            }
+    
+    .top-nav-book-btn{
+        background-image: linear-gradient(to right, rgb(60, 11, 95) , purple);
+        width: 120px;
+        height: max-content;
+        padding: 4px;
+    }
+    
+        .menu-icon{
+          display:none
+        }
+        .sidebar-container-div{
+            display:none
+        }
+    }

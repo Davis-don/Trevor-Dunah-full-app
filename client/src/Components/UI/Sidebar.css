@@ -1,0 +1,95 @@
+/* .sidelinks-ul li:hover{
+    backgroun
+    padding: 15px;d-image: linear-gradient(to right, rgb(104, 14, 169) , rgb(211, 60, 211));
+} */
+
+.activeLink{
+    padding: 15px;
+    background-image: linear-gradient(to right, rgb(104, 14, 169) , rgb(211, 60, 211));
+    }
+    .overall-sidebar-hoster-contact{
+    width: 100%;
+    height: 100vh;
+    background-color:black;
+    position: relative;
+    opacity: 0.9;
+    }
+    .contact-item-sidebar-holder{
+    z-index: +2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    top:0px
+    }
+    .actual-contact-now{
+        position: absolute;
+        top: 50%;  /* position the top  edge of the element at the middle of the parent */
+        left: 50%; /* position the left edge of the element at the middle of the parent */
+    
+        transform: translate(-50%, -50%); /* This is a shorthand of
+                                             translateX(-50%) and translateY(-50%) */
+    }
+    .menu-icon-component-overall{
+    position: absolute;
+    z-index: +1;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    
+    transform: translate(-50%, -50%); /* This is a shorthand of
+                                         translateX(-50%) and translateY(-50%) */
+    }
+    @media (max-width:640px){
+    
+    .menu-icon-component-overall{
+    background-color:rgb(42, 41, 41);
+    width: 90vw;
+    height: max-content;
+    border-radius: 30px;
+    padding: 20px;
+    }
+    .sidelinks-ul{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    }
+    .sidelinks-ul li{
+    border-bottom: 2px solid black;
+    }
+    }
+    @media screen and (min-width:641px) and (max-width:1025px){
+        .menu-icon-component-overall{
+            background-color:rgb(42, 41, 41);
+            width: 400px;
+            height: max-content;
+            border-radius: 30px;
+            padding: 20px;
+            }
+            .sidelinks-ul{
+            display: flex;
+            flex-direction: column;
+            gap:15px;
+            }
+            .sidelinks-ul li{
+            border-bottom: 2px solid black;
+            }
+    
+    }
+    @media screen and (min-width:1026px){
+        .menu-icon-component-overall{
+            background-color:rgb(42, 41, 41);
+            width: 400px;
+            height: max-content;
+            border-radius: 30px;
+            padding: 20px;
+            }
+            .sidelinks-ul{
+            display: flex;
+            flex-direction: column;
+            gap:15px;
+            }
+            .sidelinks-ul li{
+            border-bottom: 2px solid black;
+            }
+    
+    }

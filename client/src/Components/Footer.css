@@ -1,0 +1,107 @@
+@media (max-width:640px){
+    .overall-footer-component{
+    width: 100%;
+    height: max-content;
+    background-color: #141313;
+    padding: 10px;
+    }
+    .footer-contact{
+    text-align: center;
+    color:white
+    }
+    .tayari-trevor-email, .tayari-trevor-contact{
+    text-align: center;
+    }
+    .footer-icons-holder-div{
+    width: max-content;
+    margin: auto;
+    }
+    .footer-icons-holder-div ul {
+    display: flex;
+    flex-direction: row;
+    gap:20px
+    }
+    .right-footer-section{
+    border-top: 2px solid white;
+    }
+    .copyright-text{
+    text-align: center;
+    }
+    }
+    @media screen and (min-width:641px) and (max-width:1025px){
+        .overall-footer-component{
+            width: 100%;
+            height: max-content;
+            background-color: #141313;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap:20px
+            }
+            .footer-contact{
+            text-align: center;
+            color:white
+            }
+            .tayari-trevor-email, .tayari-trevor-contact{
+            text-align: center;
+            }
+            .center-footer-section{
+            margin-top: 20vh;
+            }
+            .footer-icons-holder-div{
+            width: max-content;
+            margin: auto;
+            }
+            .footer-icons-holder-div ul {
+            display: flex;
+            flex-direction: row;
+            gap:20px
+            }
+            .right-footer-section{
+            border-top: 2px solid white;
+            width: 200px;
+            }
+            .copyright-text{
+            text-align: center;
+            }
+    
+    }
+    @media screen and (min-width:1026px){
+        .overall-footer-component{
+            width: 100%;
+            height: max-content;
+            background-color: #141313;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap:20px
+            }
+            .footer-contact{
+            text-align: center;
+            color:white
+            }
+            .tayari-trevor-email, .tayari-trevor-contact{
+            text-align: center;
+            }
+            .center-footer-section{
+            margin-top: 20vh;
+            }
+            .footer-icons-holder-div{
+            width: max-content;
+            margin: auto;
+            }
+            .footer-icons-holder-div ul {
+            display: flex;
+            flex-direction: row;
+            gap:20px
+            }
+            .right-footer-section{
+            border-top: 2px solid white;
+            width: 200px;
+            }
+            .copyright-text{
+            text-align: center;
+            }
+    }
