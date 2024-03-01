@@ -1,34 +1,83 @@
 import React from 'react'
+import { useState } from 'react'
 import './Contact.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export default function Contact() {
+const [message,setMesage]=useState("")
+const [alertitem,setAlertitem]=useState(false)
+const [form,setForm]=useState(true)
+   
+const [emailData,setEmailData]=useState({
+    Name:'',
+    Email:'',
+    Contact:'',
+    Message:''
+})
+    let updateInfo=(e)=>{
+   setEmailData({
+    ...emailData,[e.target.name]:e.target.value
+   })
+    }
+    let handlepost = async (e)=>{
+        e.preventDefault();
+try{
+const response= await fetch ('http://localhost:4000/Send/email',{
+    method:'post',
+    headers:{
+        "content-type":'application/json'
+    },
+    body:JSON.stringify(emailData)
+})
+if(response){
+    const data=await response.json();
+    setAlertitem(true)
+    setForm(false)
+    setMesage(data.message)
+    setInterval(() => {
+        setForm(true)
+        setAlertitem(false)
+    }, 4000);
+    
+}
+else{
+    const errordata=await response.json();
+    console.log(errordata)
+}
+}
+catch (error){
+    console.log(error)
+}
+    }
   return (
     <div className='overall-contact-component'>
-        <form className='contact-form text-light'>
+         {alertitem && <div class="alert alert-success alert-dismissible fade show">
+    <strong>{message}</strong> 
+  </div>}
+        {form && <form className='contact-form text-light' onSubmit={handlepost}>
             <div className='form-overall-div'>
             <div>
                 <ul className='list-unstyled'>
             <li>
             <label style={{width:'100%'}}> Name
-            <input className='form-control'placeholder='Enter full names'/>
+            <input onChange={updateInfo} name='Name' className='form-control'placeholder='Enter full names'/>
             </label>
             </li>
             <li>
             <label style={{width:'100%'}}> Email
-            <input className='form-control'placeholder='Enter Email'/>
+            <input name='Email' onChange={updateInfo}  className='form-control'placeholder='Enter Email'/>
             </label>
             </li>
             <li>
             <label style={{width:'100%'}}> Contact
-            <input className='form-control'placeholder='Enter contact'/>
+            <input onChange={updateInfo} name='Contact' className='form-control'placeholder='Enter contact'/>
             </label>
             </li>
             </ul>
             </div>
             <div>
                 <label style={{width:'100%'}}> Message
-                <textarea className='form-control' placeholder='send message...'/>
+                <textarea onChange={updateInfo} name='Message' className='form-control' placeholder='send message...'/>
                 </label>
                
             </div>
@@ -37,6 +86,7 @@ export default function Contact() {
                 <button style={{backgroundColor:'purple'}} type='submit'  className='btn btn-lg'>Submit</button>
             </div>
         </form>
+}
         </div>
   )
 }
