@@ -8,7 +8,7 @@ const cors = require('cors');
 app.use(cors());
 
 const nodemailer=require('./nodemailerHandler')
-app.use('/Send/email',nodemailer)
+app.use('api/Send/email',nodemailer)
 
 app.use('/',(req,res)=>{
     res.send('server is running')
