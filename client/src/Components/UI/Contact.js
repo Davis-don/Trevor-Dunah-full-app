@@ -34,10 +34,10 @@ if(response){
     setAlertitem(true)
     setForm(false)
     setMesage(data.message)
-    setTimeout(() => {
-        setForm(true)
-        setAlertitem(false)
-    }, 4000);
+    // setTimeout(() => {
+    //     setForm(true)
+    //     setAlertitem(false)
+    // }, 4000);
     
 }
 else{
