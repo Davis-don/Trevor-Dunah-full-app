@@ -1,58 +1,50 @@
+var express = require('express')
+var cors = require('cors')
+var app = express()
 
-const express=require('express')
-const app =express();
 const bodyParser = require('body-parser');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
-const cors = require('cors'); 
-
-app.use(cors());
-
-// const corsOptions = {
-//     origin: 'https://trevordunah.vercel.app/',
-//     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-//   };
-  
-//   app.use(cors(corsOptions));
-
 
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-app.get('/',(req,res)=>{
+app.get('/',cors(),(req,res,next)=>{
     res.send('server is running')
+    next()
 })
 app.post('/',(req,res)=>{
   
     const {Name,Email,Contact,Message}=req.body
-    const TextMessage=
-    `Name ${Name}
-    Contact ${Contact}
-    Message ${Message}
-    `
-      const transporter = nodemailer.createTransport({
-          service: 'gmail',
-          auth: {
-              user: process.env.UserEmail,
-              pass: process.env.password
-          }
-      });
+    res.status(200).json({message:'email sent successfully'})
+    // const TextMessage=
+    // `Name ${Name}
+    // Contact ${Contact}
+    // Message ${Message}
+    // `
+    //   const transporter = nodemailer.createTransport({
+    //       service: 'gmail',
+    //       auth: {
+    //           user: process.env.UserEmail,
+    //           pass: process.env.password
+    //       }
+    //   });
       
-      const mailOptions = {
-          from: 'davismadaviaso@gmail.com',
-          to: Email,
-          subject: 'Message from your portfolio app',
-          text: TextMessage
-      };
+    //   const mailOptions = {
+    //       from: 'davismadaviaso@gmail.com',
+    //       to: Email,
+    //       subject: 'Message from your portfolio app',
+    //       text: TextMessage
+    //   };
       
-      transporter.sendMail(mailOptions, (error, info) => {
-          if (error) {
-              console.error(error);
-          } else {
-            res.status(200).json({message:'email sent successfully'})
-              console.log('Email sent: ' + info.response);
-          }
-      });
+    //   transporter.sendMail(mailOptions, (error, info) => {
+    //       if (error) {
+    //           console.error(error);
+    //       } else {
+    //         res.status(200).json({message:'email sent successfully'})
+    //           console.log('Email sent: ' + info.response);
+    //       }
+    //   });
          
     })
 
