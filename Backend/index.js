@@ -21,7 +21,7 @@ const corsOptions = {
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: '465',
-  secure: false, // Set to false when using port 587
+  secure: true, // Set to false when using port 587
   auth: {
     user: 'process.env.UserEmail',
     pass: 'process.env.password'
