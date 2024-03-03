@@ -60,17 +60,17 @@ catch (error){
                 <ul className='list-unstyled'>
             <li>
             <label style={{width:'100%'}}> Name
-            <input onChange={updateInfo} name='Name' className='form-control'placeholder='Enter full names'/>
+            <input type='text' required onChange={updateInfo} name='Name' className='form-control'placeholder='Enter full names'/>
             </label>
             </li>
             <li>
             <label style={{width:'100%'}}> Email
-            <input name='Email' onChange={updateInfo}  className='form-control'placeholder='Enter Email'/>
+            <input required type='email' name='Email' onChange={updateInfo}  className='form-control'placeholder='Enter Email'/>
             </label>
             </li>
             <li>
             <label style={{width:'100%'}}> Contact
-            <input onChange={updateInfo} name='Contact' className='form-control'placeholder='Enter contact'/>
+            <input  onChange={updateInfo} name='Contact' className='form-control'placeholder='Enter contact'/>
             </label>
             </li>
             </ul>

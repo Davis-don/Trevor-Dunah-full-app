@@ -16,6 +16,14 @@ const corsOptions = {
   };
   app.use(cors(corsOptions));
 
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.UserEmail,
+      pass: process.env.password
+    }
+  });
+                
 
 app.get('/',(req,res)=>{
     res.send('server is running')
@@ -23,40 +31,32 @@ app.get('/',(req,res)=>{
 app.post('/',(req,res)=>{
   
     const {Name,Email,Contact,Message}=req.body
-    res.status(200).json({message:'email sent successfully'})
+
     const TextMessage=
     `Name ${Name}
     Contact ${Contact}
     Message ${Message}
     `
-      const transporter = nodemailer.createTransport({
-          service: 'gmail',
-          auth: {
-              user: process.env.UserEmail,
-              pass: process.env.password
-          }
-      });
-      
-      const mailOptions = {
-          from: 'davismadaviaso@gmail.com',
-          to: Email,
-          subject: 'Message from your portfolio app',
-          text: TextMessage
+
+    const mailOptions = {
+        from: Email,
+        to: process.env.UserEmail,
+        subject: 'Mail from your portfolio',
+        text: TextMessage
       };
-      
+
+
       transporter.sendMail(mailOptions, (error, info) => {
-          if (error) {
-              console.error(error);
-          } else {
-            res.status(200).json({message:'email sent successfully'})
-              console.log('Email sent: ' + info.response);
-          }
+        if (error) {
+          return res.status(500).send(error.toString());
+        }
+        res.status(200).send('Email sent: ' + info.response);
       });
-         
-    })
-
-
-
+      res.status(200).json({message:'email sent successfully'})
+    });
+    
+   
+     
 app.listen(4000,(error)=>{
     if(error) throw error
     console.log('listening to port 4000')
