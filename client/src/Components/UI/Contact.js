@@ -22,7 +22,7 @@ const [emailData,setEmailData]=useState({
     let handlepost = async (e)=>{
         e.preventDefault();
 try{
-const response= await fetch ('https://trevordunahappserver.vercel.app/',{
+const response= await fetch ('http://trevordunahappserver.vercel.app',{
     method:'post',
     headers:{
         "content-type":'application/json'
@@ -34,10 +34,10 @@ if(response){
     setAlertitem(true)
     setForm(false)
     setMesage(data.message)
-    // setTimeout(() => {
-    //     setForm(true)
-    //     setAlertitem(false)
-    // }, 4000);
+    setTimeout(() => {
+        setForm(true)
+        setAlertitem(false)
+    }, 4000);
     
 }
 else{
