@@ -16,13 +16,27 @@ const corsOptions = {
   };
   app.use(cors(corsOptions));
 
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.UserEmail,
-      pass: process.env.password
-    }
-  });
+//   const transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//       user: process.env.UserEmail,
+//       pass: process.env.password
+//     }
+//   });
+
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: '587',
+  secure: false, // Set to false when using port 587
+  auth: {
+    user: 'process.env.UserEmail',
+    pass: 'process.env.password'
+  },
+  tls: {
+    rejectUnauthorized: false
+  }
+});
+
                 
 
 app.get('/',(req,res)=>{
