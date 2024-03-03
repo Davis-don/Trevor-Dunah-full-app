@@ -1,18 +1,26 @@
 var express = require('express')
 var cors = require('cors')
 var app = express()
+const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-const nodemailer = require('nodemailer');
-require('dotenv').config();
+const corsOptions = {
+    origin: 'https://trevordunah.vercel.app/', // Replace with your allowed origin or use a function for dynamic configuration
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Enable credentials (cookies, HTTP authentication) across domains
+    optionsSuccessStatus: 204, // Set the response status for successful preflight requests
+  };
+  app.use(cors(corsOptions));
+
 
 // app.get('/',cors,(req,res,next)=>{
 //     res.send('server is running')
 // })
-app.post('/',cors(),(req,res,next)=>{
+app.post('/',(req,res,next)=>{
   
     //const {Name,Email,Contact,Message}=req.body
     res.status(200).json({message:'email sent successfully'})
