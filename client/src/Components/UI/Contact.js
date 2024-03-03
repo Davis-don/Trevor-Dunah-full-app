@@ -22,7 +22,7 @@ const [emailData,setEmailData]=useState({
     let handlepost = async (e)=>{
         e.preventDefault();
 try{
-const response= await fetch ('http://trevordunahappserver.vercel.app',{
+const response= await fetch ('https://trevordunahappserver.vercel.app',{
     method:'post',
     headers:{
         "content-type":'application/json'
